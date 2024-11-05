@@ -20,13 +20,20 @@ repositories {
 
 extra["springCloudVersion"] = "2023.0.3"
 
+val kotlinReflectVersion = "2.0.21"
+val junitPlatformLauncherVersion = "1.11.3"
+val kotlinTestJunit5 = "2.0.21"
+val springCloudDepVersion = "2021.0.5"
+
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")
-    implementation("org.springframework.cloud:spring-cloud-dependencies:2021.0.5")
+    implementation("org.springframework.cloud:spring-cloud-dependencies:$springCloudDepVersion")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinReflectVersion")
+
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:$junitPlatformLauncherVersion")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:$kotlinTestJunit5")
 }
 
 dependencyManagement {
