@@ -24,11 +24,13 @@ val kotlinReflectVersion = "2.0.21"
 val junitPlatformLauncherVersion = "1.11.3"
 val kotlinTestJunit5 = "2.0.21"
 val springCloudDepVersion = "2021.0.5"
+val cloudConfigVersion = "4.1.3"
 
 dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")
     implementation("org.springframework.cloud:spring-cloud-dependencies:$springCloudDepVersion")
     implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinReflectVersion")
+    implementation("org.springframework.cloud:spring-cloud-starter-config:$cloudConfigVersion")
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:$junitPlatformLauncherVersion")
 
