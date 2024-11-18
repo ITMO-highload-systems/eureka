@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: note-eureka-service-registry
+  cloud:
+    config:
+      fail-fast: false
+      enabled: false
+eureka:
+  server:
+    response-cache-update-interval-ms: 1000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+server:
+  port: 0
+
